@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Task App</title>
+</head>
+
+<body>
+    <h1>Student Task App</h1>
+    <p>Hello! This is our hackathon project.</p>
+
+    <button onclick="checkBackend()">Check Backend</button>
+
+    <script>
+        async function checkBackend() {
+            const response = await fetch("http://localhost:3000");
+            const tasks = await response.json();
+
+            alert(tasks[0].task);
+
+        }
+    </script>
+</body>
+
+</html>
